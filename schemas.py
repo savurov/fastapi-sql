@@ -15,3 +15,20 @@ class User(UserBase):
 
     class Config:
         from_attributes = True
+
+
+
+class Message(BaseModel):
+    id: int
+    body: str
+    author: int
+
+    class Config:
+        from_attributes = True
+
+class MessageCreate(BaseModel):
+    body: str
+    author: int
+
+    class Config:
+        from_attributes = True
